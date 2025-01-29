@@ -11,7 +11,8 @@ const routes: Routes = [
     path: 'login', component: LoginComponent, pathMatch: 'full'
   },
   {
-    path: 'layout', component: LayoutComponent, pathMatch: 'full'
+    path: 'layout',
+    loadChildren: () => import('./compartido/compartido.module').then(m => m.CompartidoModule)
   },
   {
     path: '**', redirectTo: '', pathMatch: 'full'
