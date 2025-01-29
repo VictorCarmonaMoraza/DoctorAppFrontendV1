@@ -4,13 +4,19 @@
   <button mat-icon-button (click)="sidenav.toggle();">
     <mat-icon>menu</mat-icon>
   </button>
+
+  <span style="flex: 1 1 auto;"></span>
+  <label style="font-size: 14px;margin-right: 20px;">{{username}}</label>
+  <button mat-icon-button (click)="cerrarSesion();">
+    <mat-icon>logout</mat-icon>
+  </button>
 </mat-toolbar>
 
 
 <mat-sidenav-container>
 
 
-<mat-sidenav #sidenav opened mode="side" style="width: 220px;background: black;">
+<mat-sidenav #sidenav opened mode="side" style="width: 220px;background: #2c3e50;">
 
 </mat-sidenav>
 
