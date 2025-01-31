@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EspecialidadComponent } from '../especialidad/pages/especialidad/especialidad.component';
 
 const routes: Routes = [
   {
     path: '', component: LayoutComponent,
     children: [
-      { path: 'dashboard', component: DashboardComponent }, // No necesita pathMatch aquí
-      // { path: 'especialidades', component: EspecialidadesComponent }, // Agregar esta ruta si tienes un componente para especialidades
+      { path: 'dashboard', component: DashboardComponent, pathMatch: 'full' }, // No necesita pathMatch aquí
+      { path: 'especialidades', component: EspecialidadComponent, pathMatch: 'full' }, // Agregar esta ruta si tienes un componente para especialidades
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }, // Asegura que la ruta base redirige a 'dashboard'
     ]
   }
