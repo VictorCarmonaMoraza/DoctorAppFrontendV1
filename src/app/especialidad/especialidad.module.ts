@@ -4,11 +4,13 @@ import { CompartidoModule } from '../compartido/compartido.module';
 import { MaterialModule } from '../material/material.module';
 import { EspecialidadService } from './services/especialidad.service';
 import { ListadoEspecialidadComponent } from './pages/listado-especialidad/listado-especialidad.component';
+import { ModalEspecialidadComponent } from './modales/modal-especialidad/modal-especialidad.component';
 
 
 @NgModule({
   declarations: [
-    ListadoEspecialidadComponent
+    ListadoEspecialidadComponent,
+    ModalEspecialidadComponent
   ],
   imports: [
     CommonModule,
